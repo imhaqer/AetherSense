@@ -63,45 +63,14 @@ AetherSense is a web app that predicts the best time for clear views and optimal
 
 ## 6. Database Schema (Design Only)
 
-### Table: `locations`
-| Field | Type | Description |
-|--------|------|-------------|
-| id | uuid | Primary key |
-| name | text | Location name |
-| lat | float | Latitude |
-| lon | float | Longitude |
-| country | text | Country name |
-| timezone | text | Time zone |
-| is_demo | bool | Demo location flag |
-
-### Table: `observations`
-| Field | Type | Description |
-|--------|------|-------------|
-| id | uuid | Primary key |
-| location_id | uuid | FK → locations |
-| timestamp_utc | timestamptz | Observation time |
-| cloud_cover_pct | float | Cloud cover % |
-| aerosol_index | float | Haze proxy |
-| water_clarity_idx | float | Water clarity |
-| source | text | Data source (S2/S5P) |
-
-### Table: `scores`
-| Field | Type | Description |
-|--------|------|-------------|
-| id | uuid | Primary key |
-| location_id | uuid | FK → locations |
-| window_start_utc | timestamptz | Start time |
-| window_end_utc | timestamptz | End time |
-| score | int | 0–100 |
-| explanation | jsonb | Bullet list of reasons |
-| version | text | CVS version |
 
 ---
 
 ## 7. API Design (Specification Only)
 
-### `GET /health`
-Response:
-```json
-{ "status": "ok", "ts": "..." }
+## 8. Scoring Algorithm (Pseudocode)
+## 7. API Design (Specification Only)
+## 7. API Design (Specification Only)
+## 7. API Design (Specification Only)
+
 
